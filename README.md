@@ -1,37 +1,28 @@
 # Remote Command Execution Server
 
-Este é um servidor HTTP em Python que permite a execução remota de comandos em um sistema alvo. Ele oferece suporte a comunicações HTTP e HTTPS.
+This is a Python-based HTTP server that allows remote execution of commands on a target system. It supports HTTP and HTTPS communications.
 
-## Descrição
+## Description
 
-O servidor foi desenvolvido em Python 3 e permite que um sistema cliente envie comandos para execução no servidor remoto. Ele suporta a execução de comandos PowerShell em sistemas Windows.
+The server is developed in Python 3 and enables a client system to send commands for execution on the remote server. It supports the execution of PowerShell commands on Windows systems.
 
-## Funcionalidades Principais
+## Key Features
 
-- Aceita conexões HTTP e HTTPS.
-- Execução remota de comandos PowerShell.
-- Geração automática de payloads para estabelecer uma conexão reversa com o servidor.
+- Accepts HTTP and HTTPS connections.
+- Remote execution of PowerShell commands.
+- Automatic payload generation to establish a reverse connection with the server.
 
-## Requisitos
+## Requirements
 
-- Python 3.x instalado.
-- Acesso a um sistema operacional compatível com Python (Windows, Linux, macOS).
-- Certificado SSL válido (para conexões HTTPS).
+- Python 3.x installed.
+- Access to a Python-compatible operating system (Windows, Linux, macOS).
+- Valid SSL certificate (for HTTPS connections).
 
-## Como Usar
+## How to Use
 
-1. Clone o repositório.
-2. Instale os requisitos executando `pip install -r requirements.txt`.
-3. Execute o servidor usando o comando `python3 server.py`.
-4. Use um cliente HTTP ou HTTPS para enviar comandos para execução.
+1. Clone the repository.
+2. Install the requirements by running `pip install -r requirements.txt`.
+3. Run Feel free to customize the text or formatting according to your preferences. Once you've inserted it into your README.md file on GitHub, users will be able to view the details of your Remote Command Execution Server and understand how to use it.
 
-## Exemplos de Uso
+Remember to keep your README updated with any changes or additional information as needed. Happy coding!
 
-- Execução remota de comandos: `curl -X POST -d "command=whoami" http://localhost:8080`.
-- Execução remota de scripts: `curl -X POST -F "script=@script.ps1" http://localhost:8080`.
-- Restaurar sessão ao vivo (se ativado): `curl -X GET http://localhost:8080`.
-
-## Notas
-
-- Este servidor é destinado apenas para fins educacionais e de teste. Use com responsabilidade.
-- A execução remota de comandos pode representar um risco de segurança, especialmente em sistemas não autenticados.
